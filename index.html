@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اخسر الوزن بسرعة</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .headline {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d52a2a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .geo-message {
+      background-color: #e7f3ff;
+      color: #0c5460;
+      border: 1px solid #bee5eb;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 16px;
+    }
+    .image {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .testimonial {
+      background-color: #f9f9f9;
+      border-right: 5px solid #4caf50;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .cta-button {
+      display: block;
+      text-align: center;
+      background-color: #4caf50;
+      color: white;
+      padding: 15px;
+      font-size: 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+    .cta-button:hover {
+      background-color: #43a047;
+    }
+    .fixed-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
+    .before-after {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .before-after img {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+    .benefits {
+      margin-top: 30px;
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .benefits h2 {
+      color: #333;
+    }
+    .benefits ul {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+    .comments, .fb-comments {
+      margin-top: 40px;
+    }
+    .comment {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .comment strong {
+      color: #333;
+    }
+    .fb-comment {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .fb-comment img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+    .fb-comment .name {
+      font-weight: bold;
+      margin-left: 5px;
+    }
+    .fb-comment .text {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 90%;
+    }
+    .stock {
+      background: #fff3cd;
+      padding: 12px;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .badge {
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .badge img {
+      width: 150px;
+    }
+  </style>
+  <script>
+    fetch('https://ipapi.co/json')
+      .then(response => response.json())
+      .then(data => {
+        const city = data.city || "مدينتك";
+        document.getElementById("geoMessage").innerText = `📍 أكثر من 120 شخص من ${city} جربوا FormFit هذا الأسبوع!`;
+      });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline">الآلاف في الجزائر يستخدمون هذا العصير لحرق الدهون!</h1>
+
+    <div class="geo-message" id="geoMessage">جاري التحميل...</div>
+
+    <img src="https://i.ibb.co/CpJLCxTN/product-order.webp" alt="FormFit" class="image">
+
+    <div class="stock">⚠️ عدد الحزم المتبقية بسعر الخصم: <strong>9 فقط!</strong></div>
+
+    <div class="testimonial">
+      <p>بعد أسبوعين فقط من استخدام <strong>FormFit</strong>، بدأت ألاحظ فرقًا كبيرًا في وزني وانتفاخ بطني اختفى! أشعر بالخفة والنشاط طوال اليوم!</p>
+    </div>
+
+    <div class="before-after">
+      <img src="https://i.ibb.co/bj2d4zc5/8282e0f10d10f146c9944527bc8d0775.jpg" alt="Fatima Before and After">
+    </div>
+
+    <div class="benefits">
+      <h2>✨ فوائد FormFit</h2>
+      <ul>
+        <li>🔥 يحرق الدهون الموضعية بسهولة</li>
+        <li>💧 يقلل من الانتفاخ واحتباس السوائل</li>
+        <li>🍀 مكونات طبيعية 100٪ (شاي أخضر، قهوة خضراء والمزيد)</li>
+        <li>⚡ يزيد من الطاقة ويحسن الأيض</li>
+        <li>👌 بدون آثار جانبية، آمن للاستخدام اليومي</li>
+      </ul>
+    </div>
+
+    <div class="comments">
+      <div class="comment">
+        <strong>سميرة من وهران:</strong>
+        <p>كنت متشككة في البداية، لكن النتائج أدهشتني! فقدت 5 كغ في أقل من شهر!</p>
+      </div>
+      <div class="comment">
+        <strong>ليلى من الجزائر العاصمة:</strong>
+        <p>جربت العديد من المنتجات ولم يعمل شيء. FormFit مختلف تمامًا! أنصح به لكل من يعاني من الوزن الزائد.</p>
+      </div>
+      <div class="comment">
+        <strong>خالد من قسنطينة:</strong>
+        <p>أشعر بنشاط لم أشعر به منذ سنوات، وبطني أصبح مسطحًا. شكراً على هذا المنتج الرائع!</p>
+      </div>
+    </div>
+
+    <div class="fb-comments">
+      <div class="fb-comment">
+        <img src="https://i.pravatar.cc/40?img=12" alt="">
+        <span class="name">Yasmine B.</span>
+        <span class="text">هذا المنتج غير حياتي فعلاً! أنصح به بشدة 👌</span>
+      </div>
+      <div class="fb-comment">
+        <img src="https://i.pravatar.cc/40?img=47" alt="">
+        <span class="name">Noureddine A.</span>
+        <span class="text">طلبته الأسبوع الماضي واستلمته أمس. سأبدأ باستخدامه اليوم إن شاء الله</span>
+      </div>
+      <div class="fb-comment">
+        <img src="https://i.pravatar.cc/40?img=33" alt="">
+        <span class="name">Fatima Z.</span>
+        <span class="text">فقدت 3 كغ في 10 أيام فقط 😍</span>
+      </div>
+    </div>
+
+    <a href="https://formfit1.doctormurin.com/l" class="cta-button">اطلب الآن وادفع فقط عند التسليم</a>
+  </div>
+
+  <a href="https://formfit1.doctormurin.com/l" class="fixed-button">اطلب الآن 🛒</a>
+</body>
+</html>
