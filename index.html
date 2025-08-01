@@ -130,7 +130,7 @@
       vertical-align: middle;
       max-width: 90%;
     }
-    .stock {
+    .stock, #countdown {
       background: #fff3cd;
       padding: 12px;
       border: 1px solid #ffeeba;
@@ -154,13 +154,14 @@
       .then(response => response.json())
       .then(data => {
         const city = data.city || "مدينتك";
-        document.getElementById("geoMessage").innerText = `📍 أكثر من 120 شخص من ${city} جربوا FormFit هذا الأسبوع!`;
+        document.getElementById("geoMessage").innerText =
+          `📍 تم طلب FormFit أكثر من 120 مرة هذا الأسبوع من ${city}!`;
       });
   </script>
 </head>
 <body>
   <div class="container">
-    <h1 class="headline">الآلاف في الجزائر يستخدمون هذا العصير لحرق الدهون!</h1>
+    <h1 class="headline">سر بسيط يساعد النساء في الجزائر على خسارة 7 كغ في 14 يوم فقط – بدون حمية أو رياضة!</h1>
 
     <div class="geo-message" id="geoMessage">جاري التحميل...</div>
 
@@ -186,6 +187,8 @@
         <li>👌 بدون آثار جانبية، آمن للاستخدام اليومي</li>
       </ul>
     </div>
+
+    <div id="countdown">⏳ العرض ينتهي خلال: <span id="timer"></span></div>
 
     <div class="comments">
       <div class="comment">
@@ -220,9 +223,36 @@
       </div>
     </div>
 
+    <div class="badge">
+      <img src="https://i.ibb.co/gj6JrN8/recommended-arabic.png" alt="موصى به من قبل الخبراء">
+    </div>
+
     <a href="https://formfit1.doctormurin.com/l" class="cta-button">اطلب الآن وادفع فقط عند التسليم</a>
+
+    <p style="text-align:center; font-size:14px; margin-top:10px;">
+      ✅ الدفع عند الإستلام | 🚚 توصيل سريع وآمن | 🔐 ضمان إسترجاع المال
+    </p>
   </div>
 
   <a href="https://formfit1.doctormurin.com/l" class="fixed-button">اطلب الآن 🛒</a>
+
+  <script>
+    const countdown = () => {
+      const now = new Date().getTime();
+      const deadline = now + 3 * 60 * 60 * 1000;
+      const x = setInterval(() => {
+        const distance = deadline - new Date().getTime();
+        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("timer").innerHTML = `${h}س ${m}د ${s}ث`;
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "⛔ انتهى العرض، جرب غداً!";
+        }
+      }, 1000);
+    };
+    countdown();
+  </script>
 </body>
 </html>
